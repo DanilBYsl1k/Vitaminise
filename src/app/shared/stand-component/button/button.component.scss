@@ -1,0 +1,26 @@
+@import 'src/styles/variables/color';
+
+button {
+  font-style: normal;
+  font-size: 16px;
+  line-height: 19px;
+
+  text-align: center;
+  color: $primary-orange-light;
+  background-color: transparent;
+  padding: 14px;
+  border: 2px solid $primary-orange-light;
+  border-radius: 16px;
+  width: 288px;
+  transition: 0.2s ease;
+  cursor: pointer;
+
+  &:hover {
+    color: $backGround-white;
+    background-color: $primary-orange-light;
+  }
+
+  &:active {
+
+  }
+}

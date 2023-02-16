@@ -1,66 +1,80 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;600;700&display=swap');
 
-@import 'styles/variables/color';
+@import "src/styles/index";
 
 *{
     box-sizing: border-box;
 }
-body{
+
+body {
     margin: 0;
     color: black;
-    font-family:'Open Sans';
+    font-family: 'Open Sans', sans-serif;
 }
-h1,h2,p{
-    font-family:'Raleway';
+
+h1,h2,p {
+    font-family:'Raleway', sans-serif;
 }
-p{
+
+p {
     font-weight: 400;
 }
-ul{
+
+ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
-a{
+
+a {
     text-decoration: none;
     color: black;
 }
 
-.bold-Raleway{
+///ASDASDASDASDASDASDASD
+.bold-raleway {
     font-weight: 1000;
-    font-family:'Raleway';
-}
-.semiBold-Raleway{
-    font-weight: 600;
-    font-family:'Raleway';
-}
-.regular-Raleway{
-    font-weight: 400;
-    font-family:'Raleway';
-}
-.Open-Sans{
-    font-weight: 400;
-    font-family:'Open-Sans';
+    font-family:'Raleway', sans-serif;
 }
 
+.semiBold-raleway {
+    font-weight: 600;
+    font-family:'Raleway', sans-serif;
+}
+
+.regular-raleway {
+    font-weight: 400;
+    font-family:'Raleway', sans-serif;
+}
+
+.open-sans {
+    font-weight: 400;
+    font-family:'Open-Sans', sans-serif;
+}
+
+//// !!!!!!
 .container{
     width: 1200px;
     margin: auto;
 }
-.title-h1{
-    color: #0F1178;
-    text-align: center;
-    font-style: normal;
-    font-size: 60px;
+
+h1 {
+    color: #0F1178; //!!!!!!
+    text-align: center;  //!!!!!
+    font-style: normal;  //!!!!!
+    font-size: 60px; // !!!!!!!
     line-height: 120%;
 }
-.title-main_h3{
+
+.title-main_h3 { // naming exh3
     font-size: 28px;
     line-height: 33px;
-    text-align: center;
-    color: #000000;
+    text-align: center; //!!!!!
+    color: #000000; //!!!!!!
 }
+
+// !!!!!!
 .back-btn{
     cursor: pointer;
     color: $primary-orange-light ;

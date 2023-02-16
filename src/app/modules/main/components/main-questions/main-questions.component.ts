@@ -1,4 +1,8 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  ViewEncapsulation,
+} from '@angular/core';
 
 @Component({
   selector: 'vtm-main-questions',
@@ -6,4 +10,4 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrls: ['./main-questions.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export default class MainQuestionsComponent {}
+export class MainQuestionsComponent {}

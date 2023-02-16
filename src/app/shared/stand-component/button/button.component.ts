@@ -8,16 +8,16 @@ import {
 
 @Component({
   selector: 'vtm-button',
-  templateUrl: './button.component.html',
+  template: `
+    <button [class]="type" (click)="submitted.emit()">{{ label }}</button>
+  `,
   styleUrls: ['./button.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
 })
 export class ButtonComponent {
-  @Input() nameQuestion!: string;
+  @Input() label!: string;
+  @Input() type!: 'primary' | 'secondary';
 
-  @Output() newItemEvent = new EventEmitter<object>();
-
-  addNewItem(value: object) {
-    this.newItemEvent.emit(value);
-  }
+  @Output() submitted = new EventEmitter<void>();
 }

@@ -1,0 +1,30 @@
+@import "src/styles/variables/spacing";
+
+$offset-scale: (
+  0: $spacing-0,
+  1: $spacing-1,
+  2: $spacing-2,
+  3: $spacing-3,
+  4: $spacing-4,
+  5: $spacing-5,
+);
+
+$offset-direction: (top, bottom, left, right);
+$offset-kind: (padding, margin);
+
+.vtm-app {
+  @each $kind in $offset-kind {
+    @each $level, $offset in $offset-scale {
+
+      .#{$kind}-#{$level} {
+        #{$kind}: $offset;
+      }
+
+      @each $dir in $offset-direction {
+        .#{$kind}-#{$dir}-#{$level} {
+          #{$kind}-#{$dir}: $offset;
+        }
+      }
+    }
+  }
+}
