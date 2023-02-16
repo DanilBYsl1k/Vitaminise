@@ -19,7 +19,8 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    const constentSpanText = compiled.querySelector('.content span')?.textContent;
+    const constentSpanText =
+      compiled.querySelector('.content span')?.textContent;
     expect(constentSpanText).toContain('Vitaminise app is running!');
   });
 });

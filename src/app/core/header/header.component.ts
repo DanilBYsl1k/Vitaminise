@@ -1,11 +1,16 @@
-import { Component, HostListener } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  HostListener,
+} from '@angular/core';
 
 @Component({
   selector: 'vtm-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export default class HeaderComponent {
+export class HeaderComponent {
   width = 0;
 
   height = 0;

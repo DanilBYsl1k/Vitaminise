@@ -7,8 +7,8 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./footer.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export default class FooterComponent {
-  formLetter:FormGroup = new FormGroup({
+export class FooterComponent {
+  formLetter: FormGroup = new FormGroup({
     email: new FormControl('', [Validators.required]),
     letter: new FormControl('', [Validators.required]),
   });

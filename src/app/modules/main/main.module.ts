@@ -1,13 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import FooterModule from '@app/core/footer/footer.module';
-import MainComponent from '@modules/main/components/main/main.component';
-import MainQuestionsComponent from '@modules/main/components/main-questions/main-questions.component';
-import ButtonModule from '@modules/button/button.module';
-import SharedModule from '@shared/shared.module';
 
-const routes:Routes = [
+import MainQuestionsComponent from '@modules/main/components/main-questions/main-questions.component';
+import { MainComponent } from '@modules/main/components/main/main.component';
+import { SharedModule } from '@shared/shared.module';
+import { ButtonModule } from '@modules/button/button.module';
+import { CoreModule } from '@core/core.module';
+
+const routes: Routes = [
   { path: 'main', component: MainComponent },
   { path: 'main/question', component: MainQuestionsComponent },
 ];
@@ -16,10 +17,10 @@ const routes:Routes = [
   declarations: [MainComponent, MainQuestionsComponent],
   imports: [
     CommonModule,
-    FooterModule,
     ButtonModule,
     SharedModule,
-    RouterModule.forChild(routes)],
+    RouterModule.forChild(routes),
+    CoreModule,
+  ],
 })
-
-export default class MainModule {}
+export class MainModule {}

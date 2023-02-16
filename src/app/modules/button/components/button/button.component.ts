@@ -1,5 +1,9 @@
 import {
-  ChangeDetectionStrategy, Component, EventEmitter, Input, Output,
+  ChangeDetectionStrategy,
+  Component,
+  EventEmitter,
+  Input,
+  Output,
 } from '@angular/core';
 
 @Component({
@@ -8,8 +12,8 @@ import {
   styleUrls: ['./button.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export default class ButtonComponent {
-  @Input()nameQuestion!: string;
+export class ButtonComponent {
+  @Input() nameQuestion!: string;
 
   @Output() newItemEvent = new EventEmitter<object>();
 

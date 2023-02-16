@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;600;700&display=swap');
-@import 'variables/color';
 
-
+@import 'styles/variables/color';
 
 *{
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 body{
     margin: 0;
@@ -73,4 +72,3 @@ a{
     font-weight: 700;
     margin: 10px 0;
 }
-@include desktop_query

@@ -6,12 +6,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrls: ['./main.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export default class MainComponent {
-  // eslint-disable-next-line class-methods-use-this
-  clickBtn(evt:any) {
-    console.log(evt);
-  }
-
+export class MainComponent {
   text = {
     whatNeedYou: ' Все що вам потрібно за кілька кліків просто зараз',
     greatings: ' Вітаємо у Вітамінайз. Що ви бажаєте зробити ',
@@ -21,4 +16,9 @@ export default class MainComponent {
     sendApplication: 'Подати заявку',
     back: 'Повернутися на головну',
   };
+
+  // eslint-disable-next-line class-methods-use-this
+  clickBtn(): void {
+    // something do....
+  }
 }

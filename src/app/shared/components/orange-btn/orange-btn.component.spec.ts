@@ -9,8 +9,7 @@ describe('OrangeBtnComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [OrangeBtnComponent],
-    })
-      .compileComponents();
+    }).compileComponents();
 
     fixture = TestBed.createComponent(OrangeBtnComponent);
     component = fixture.componentInstance;

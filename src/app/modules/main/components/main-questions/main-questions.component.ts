@@ -6,6 +6,4 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrls: ['./main-questions.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export default class MainQuestionsComponent {
-
-}
+export default class MainQuestionsComponent {}

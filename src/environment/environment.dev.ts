@@ -1,5 +1,5 @@
 const environment = {
-  prod: true,
+  production: true,
 };
 
 export default environment;
