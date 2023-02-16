@@ -1,0 +1,14 @@
+@mixin center-content{
+    justify-content: center;
+    align-items: center;
+}
+@mixin grid-two-column{
+    grid-template-columns: 1fr 1fr;
+}
+@mixin desktop_query{
+    @media (max-width:1199px) { @content; }
+}
+@mixin phone_query{
+    @media (max-width:765px) { @content; }
+}
+

@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;600;700&display=swap');
+@import 'variables/color';
+
+
+
+*{
+    box-sizing: border-box; 
+}
+body{
+    margin: 0;
+    color: black;
+    font-family:'Open Sans';
+}
+h1,h2,p{
+    font-family:'Raleway';
+}
+p{
+    font-weight: 400;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.bold-Raleway{
+    font-weight: 1000;
+    font-family:'Raleway';
+}
+.semiBold-Raleway{
+    font-weight: 600;
+    font-family:'Raleway';
+}
+.regular-Raleway{
+    font-weight: 400;
+    font-family:'Raleway';
+}
+.Open-Sans{
+    font-weight: 400;
+    font-family:'Open-Sans';
+}
+
+.container{
+    width: 1200px;
+    margin: auto;
+}
+.title-h1{
+    color: #0F1178;
+    text-align: center;
+    font-style: normal;
+    font-size: 60px;
+    line-height: 120%;
+}
+.title-main_h3{
+    font-size: 28px;
+    line-height: 33px;
+    text-align: center;
+    color: #000000;
+}
+.back-btn{
+    cursor: pointer;
+    color: $primary-orange-light ;
+    background-color:$primary-orange-transparent ;
+    border: none;
+    padding: 15px;
+    border-radius: 16px;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+@include desktop_query

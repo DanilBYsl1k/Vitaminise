@@ -1,0 +1,22 @@
+<div class="page-main">
+    <div class="bgc-main">
+        <img class="bgc-main__bgc-wallpaper" src="assets/images/main/background.png" alt="">
+        <img class="bgc-main__logotype" src="assets/images/main/vitamimize.svg" alt="">
+    </div>
+    <section class="section-main__content">
+        <div class="container section-main__content-container">    
+            <h1 i18n class="title-h1 section-main__content__title bold-Raleway">
+                {{text.whatNeedYou}}
+            </h1>
+            <h3 class="title-main_h3 bold-Raleway">{{text.greatings}}</h3> 
+            <div class="main__box ">
+                <vtm-button (newItemEvent)="clickBtn($event)" [nameQuestion]="text.buyCarPolicy"></vtm-button>
+                <vtm-button (newItemEvent)="clickBtn($event)" [nameQuestion]="text.knowMore"></vtm-button>
+                <vtm-button (newItemEvent)="clickBtn($event)" [nameQuestion]="text.lookMyinsurances"></vtm-button>
+                <vtm-button (newItemEvent)="clickBtn($event)" [nameQuestion]="text.sendApplication"></vtm-button>
+            </div>
+            <vtm-orange-btn class="orange-btn" [textBtn]="text.back"></vtm-orange-btn>
+        </div>
+    </section>
+    <vtm-footer></vtm-footer>
+</div>

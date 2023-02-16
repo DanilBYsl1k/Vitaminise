@@ -1,0 +1,57 @@
+@import '/src/styles/variables/color';
+
+a{
+    font-family: 'Raleway';
+    font-size: 14px;
+}
+.footer{
+    padding: 50px 0;
+    background-color: $blue-many-light;
+}
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+}
+.footer__list-social{
+    display: flex;
+    gap: 10px;
+}
+.footer__list-info{
+    li{
+        margin-bottom:8px;
+    }
+}
+.email-link{
+        text-decoration: underline;
+        color: $primary-gren-dark;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    input{
+        width: 100%;
+        border: none;
+        border-bottom:1px solid #b6b9f9;
+        padding: 10px 0;
+        margin: 10px 0;
+        background-color: transparent;
+        outline: none;
+        font-family: 'Raleway';
+        &::placeholder{
+            color: $backGround-dark;
+        }
+    }
+}
+.footer__form-btn{
+    background-color: $primary-gren-dark;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 11px 129px;
+    gap: 10px;
+    border-radius: 10px;
+    border: none;
+    color:white;
+    font-size: 14px;
+    line-height: 16px;
+}

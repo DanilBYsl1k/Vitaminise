@@ -1,0 +1,48 @@
+@import '/src/styles/mixins/query.mixin';
+@import '/src/styles/variables/color';
+
+.page-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    background-color: #F6F6F6;;
+    // z-index: -1;
+}
+.bgc-main{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content:center;
+}
+.bgc-main__bgc-wallpaper{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    max-height: 399px;
+    z-index: 1;
+}
+.bgc-main__logotype{
+    margin: 32px 0;
+    z-index: 2;
+}
+.section-main__content{
+    z-index: 2;
+}
+.section-main__content-container{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include center-content;
+    background-color: $backGround-white;
+    margin-bottom: 20px;
+}
+.main__box{
+    width: 794px;
+    display: grid;
+    gap: 15px;
+    @include grid-two-column; 
+}
+.orange-btn{
+    margin: 50px 0 20px 0;
+}

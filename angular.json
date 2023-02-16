@@ -7,17 +7,24 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss"
+          "style": "scss",
+          "changeDetection": "OnPush"
         }
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "vtm",
+      "i18n": {
+        "sourceLocale":"ua",
+        "locales": {
+          "en-US":"src/i18n/message/engl.en.xlf"
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/vitaminise",
+            "outputPath": "dist/",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -30,11 +37,14 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles/styles.scss"
             ],
             "scripts": []
           },
           "configurations": {
+            "en-US":{
+              "localize":["en-US"]
+            },
             "production": {
               "budgets": [
                 {
@@ -46,6 +56,12 @@
                   "type": "anyComponentStyle",
                   "maximumWarning": "2kb",
                   "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "src/invironments/invironment.ts",
+                  "with": "src/invironments/invironment.prod.ts"
                 }
               ],
               "outputHashing": "all"
@@ -66,6 +82,9 @@
           "configurations": {
             "production": {
               "browserTarget": "Vitaminise:build:production"
+            },
+            "en-Us":{
+              "browserTarget": "Vitaminise:build:production:en-US"
             },
             "development": {
               "browserTarget": "Vitaminise:build:development"
@@ -97,8 +116,22 @@
             ],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
+  },
+  "cli": {
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
   }
 }
