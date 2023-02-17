@@ -5,22 +5,26 @@ button {
   font-size: 16px;
   line-height: 19px;
 
-  text-align: center;
-  color: $primary-orange-light;
-  background-color: transparent;
-  padding: 14px;
-  border: 2px solid $primary-orange-light;
-  border-radius: 16px;
   width: 288px;
+  padding: 14px;
+  border-radius: 16px;
+  border: 2px solid $primary-orange-light;
+  text-align: center;
+  box-shadow: 0px 4px 20px rgba(123, 123, 126, 0.3);
+
   transition: 0.2s ease;
   cursor: pointer;
-
-  &:hover {
+  
+  &.primary {
     color: $backGround-white;
     background-color: $primary-orange-light;
   }
-
-  &:active {
-
+  &.secondary {
+    color: $primary-orange-light;
+    background-color: transparent;
+  }
+  &:hover {
+    color: $backGround-white;
+    background-color: $primary-orange-light;
   }
 }

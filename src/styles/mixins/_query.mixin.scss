@@ -2,7 +2,14 @@
   justify-content: center;
   align-items: center;
 }
-
+@mixin flex-column-betwen{
+  flex-direction: column;
+  justify-content: space-between;
+}
+@mixin flex-column-center{
+  display: flex;
+  justify-content: center;
+}
 @mixin grid-two-column {
   grid-template-columns: 1fr 1fr;
 }

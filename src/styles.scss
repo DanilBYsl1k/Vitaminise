@@ -3,8 +3,9 @@
 
 @import "src/styles/index";
 
-*{
+* {
     box-sizing: border-box;
+    font-style: normal;
 }
 
 body {
@@ -33,56 +34,8 @@ a {
 }
 
 ///ASDASDASDASDASDASDASD
-.bold-raleway {
-    font-weight: 1000;
-    font-family:'Raleway', sans-serif;
-}
-
-.semiBold-raleway {
-    font-weight: 600;
-    font-family:'Raleway', sans-serif;
-}
-
-.regular-raleway {
-    font-weight: 400;
-    font-family:'Raleway', sans-serif;
-}
-
-.open-sans {
-    font-weight: 400;
-    font-family:'Open-Sans', sans-serif;
-}
-
 //// !!!!!!
-.container{
-    width: 1200px;
-    margin: auto;
-}
-
 h1 {
-    color: #0F1178; //!!!!!!
-    text-align: center;  //!!!!!
-    font-style: normal;  //!!!!!
-    font-size: 60px; // !!!!!!!
+    font-size: 60px;
     line-height: 120%;
-}
-
-.title-main_h3 { // naming exh3
-    font-size: 28px;
-    line-height: 33px;
-    text-align: center; //!!!!!
-    color: #000000; //!!!!!!
-}
-
-// !!!!!!
-.back-btn{
-    cursor: pointer;
-    color: $primary-orange-light ;
-    background-color:$primary-orange-transparent ;
-    border: none;
-    padding: 15px;
-    border-radius: 16px;
-    font-size: 16px;
-    font-weight: 700;
-    margin: 10px 0;
 }

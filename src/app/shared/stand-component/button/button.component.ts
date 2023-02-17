@@ -9,7 +9,9 @@ import {
 @Component({
   selector: 'vtm-button',
   template: `
-    <button [class]="type" (click)="submitted.emit()">{{ label }}</button>
+    <button [class]="type" (click)="submitted.emit()" class="bold-raleway">
+      {{ label }}
+    </button>
   `,
   styleUrls: ['./button.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

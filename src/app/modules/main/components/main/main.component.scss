@@ -1,85 +1,85 @@
 @import '/src/styles/mixins/query.mixin';
 @import '/src/styles/variables/color';
 
-
 .main-wrapper {
-  background-image: url("~src/assets/images/main/background.png");
-}
+  min-height: 100vh;
 
-.bgc-main{
-  width: 100%;
-  position: relative;
   display: flex;
-  justify-content:center;
-}
+  @include flex-column-betwen;
 
+  background-color: #F5F5F5;
+  background-image: url("~src/assets/images/main/background.png");
+  background-size: 150%;
+  background-repeat: no-repeat;
 
-button {
-  &.main-button {
-    background-color: $backGround-white;
-    color:black;
-    width: 100%;
-    border: none;
-    box-shadow: 0px 4px 24px rgba(114, 121, 197, 0.5);
-    border-radius: 10px;
-    font-size: 20px;
-    line-height: 120%;
-    padding: 20px;
-    transition: 0.2s ease;
-    cursor: pointer;
-    &:hover{
-      background-color: $primary-gren-light;
-      color:white;
+  .container-logotype {
+    @include flex-column-center;
+    
+    img {
+      max-width: 400px;
     }
-    &:active{
-      background-color: $primary-gren-dark;
+
+    @include phone_query {
+      img {
+        max-width: 200px;
+      }
     }
   }
-}
 
-.page-main{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 100vh;
-    background-color: #F6F6F6;;
-    // z-index: -1;
-}
+  .content-container {
+    background-color: $backGround-white;
 
+    margin-bottom: 20px;
+    padding-bottom:20px ;
 
-.bgc-main__bgc-wallpaper{
-    position: absolute;
-    top: 0;
-    width: 100%;
-    max-height: 399px;
-    z-index: 1;
-}
-
-.bgc-main__logotype{
-    margin: 32px 0;
-    z-index: 2;
-}
-
-.section-main__content{
-    z-index: 2;
-}
-
-.section-main__content-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     @include center-content;
-    background-color: $backGround-white;
-    margin-bottom: 20px;
-}
+  }
 
-.main__box{
+  .main__box {
     width: 794px;
     display: grid;
     gap: 15px;
     @include grid-two-column;
+
+    @include phone_query {
+      grid-template-columns: 1fr;
+      width: 100%;
+      padding: 0 10px;
+    }
+  }
 }
 
-.orange-btn{
-    margin: 50px 0 20px 0;
+h1{
+  text-align: center;
+}
+
+button {
+  &.main-button {
+    width: 100%;
+    font-size: 20px;
+    line-height: 120%;
+
+    background-color: $backGround-white;
+    color:black;
+
+    border: none;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 24px rgba(114, 121, 197, 0.5);
+
+    transition: 0.2s ease;
+    cursor: pointer;
+    
+    &:hover {
+      background-color: $primary-gren-light;
+      color:white;
+    }
+    
+    &:active {
+      background-color: $primary-gren-dark;
+    }
+  }
 }

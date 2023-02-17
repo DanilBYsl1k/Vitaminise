@@ -1,0 +1,28 @@
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+.back-btn{
+    color: $primary-orange-light ;
+    background-color:$primary-orange-transparent ;
+    
+    border: none;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 16px;
+    font-size: 16px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+.h1-blue{
+    color: $blue-dark;
+}
+.h1-black{
+    color: $blue-dark;
+}
+.title-black-h3 { 
+    font-size: 28px;
+    line-height: 33px;
+    color: #000000; 
+}   
