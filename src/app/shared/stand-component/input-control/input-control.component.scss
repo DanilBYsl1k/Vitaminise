@@ -1,0 +1,22 @@
+input{
+    width: 100%;
+    border: 1px solid gray;
+    padding: 10px;
+    background: #FEFEFE;
+    border: 1px solid rgba(5, 5, 5, 0.4);
+    border-radius: 10px;
+    font-family: 'Open Sans';
+    outline: none;
+}
+h5{
+    padding-bottom:10px;
+}
+.invalid{
+    border: red solid 1px;
+}
+label{
+    h5{
+        margin: 0;
+        font-size: 16px;
+    }
+}

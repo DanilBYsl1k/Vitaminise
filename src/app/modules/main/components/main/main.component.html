@@ -3,21 +3,23 @@
     <div class="container container-logotype margin-bottom-4">
       <img  src="assets/images/main/vitamimize.svg" alt="vitamimize">
     </div>
-    
+
     <div class="container content-container">
       <h1 class="h1-blue bold-raleway">
         {{text.whatNeedYou}}
       </h1>
-
+      
       <h3 class="title-main_h3 bold-Raleway">{{text.greatings}}</h3>
 
       <div class="main__box">
-        <button class="main-button semibold-raleway">{{ text.buyCarPolicy }}</button>
-        <button class="main-button semibold-raleway">{{ text.knowMore }}</button>
-        <button class="main-button semibold-raleway">{{ text.lookMyinsurances }}</button>
-        <button class="main-button semibold-raleway">{{ text.sendApplication }}</button>
+        <vtm-gren-standart-btn routerLink="buy-polis" label={{text.buyCarPolicy}}></vtm-gren-standart-btn>
+        <vtm-gren-standart-btn  label={{text.lookMyinsurances}}></vtm-gren-standart-btn>
+        <vtm-gren-standart-btn routerLink="question" label={{text.knowMore}}></vtm-gren-standart-btn>
+        <vtm-gren-standart-btn  label={{text.sendApplication}}></vtm-gren-standart-btn>
       </div>
-      <vtm-button label="Повернутися на Головну" type="secondary"  class="margin-top-4"></vtm-button>
+      <div class="btn-box margin-top-5">
+        <vtm-button routerLink="/" label="Повернутися на Головну" type="secondary"  class="margin-top-4"></vtm-button>
+      </div>
     </div>
   </section>
 </div>

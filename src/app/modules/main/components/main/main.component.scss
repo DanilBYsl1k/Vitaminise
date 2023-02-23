@@ -1,5 +1,4 @@
-@import '/src/styles/mixins/query.mixin';
-@import '/src/styles/variables/color';
+@import '/src/styles';
 
 .main-wrapper {
   min-height: 100vh;
@@ -9,16 +8,14 @@
 
   background-color: #F5F5F5;
   background-image: url("~src/assets/images/main/background.png");
-  background-size: 150%;
+  background-size: 100%;
   background-repeat: no-repeat;
-
+  
   .container-logotype {
-    @include flex-column-center;
-    
+    @include flex-column-center; 
     img {
       max-width: 400px;
     }
-
     @include phone_query {
       img {
         max-width: 200px;
@@ -50,36 +47,11 @@
       padding: 0 10px;
     }
   }
+  .btn-box{
+    width: 288px;
+  }
 }
 
 h1{
   text-align: center;
-}
-
-button {
-  &.main-button {
-    width: 100%;
-    font-size: 20px;
-    line-height: 120%;
-
-    background-color: $backGround-white;
-    color:black;
-
-    border: none;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 24px rgba(114, 121, 197, 0.5);
-
-    transition: 0.2s ease;
-    cursor: pointer;
-    
-    &:hover {
-      background-color: $primary-gren-light;
-      color:white;
-    }
-    
-    &:active {
-      background-color: $primary-gren-dark;
-    }
-  }
 }

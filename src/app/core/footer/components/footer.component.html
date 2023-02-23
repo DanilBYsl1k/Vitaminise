@@ -33,10 +33,16 @@
         </ul>
         <div class="footer__form-letter">
             <p>Надішліть нам листа</p>
-            <form class="form" >
-                <input placeholder="Вкажіть ваш емейл" type="email">
-                <input placeholder="Введіть текст повідомлення" type="text">
-                <button class="footer__form-btn">Відправити</button>
+            <form class="form" [formGroup]="formLetter" (ngSubmit)="onSubmit()">
+                <p class="error-validation" *ngIf="this.formLetter.get('email')?.invalid && this.formLetter.get('email')?.touched">
+                    некоректна назва пошти
+                </p>
+                <input formControlName="email" placeholder="Вкажіть ваш емейл" type="email" name="email">
+                <p class="error-validation" *ngIf="this.formLetter.get('letter')?.invalid && this.formLetter.get('letter')?.touched">
+                    Мінімальна довжина повідомлення 8 слів
+                </p>
+                <input formControlName="letter" placeholder="Введіть текст повідомлення" type="text" name="letter">
+                <button [disabled]="this.formLetter.invalid" class="footer__form-btn">Відправити</button>
             </form>  
         </div>
     </div>

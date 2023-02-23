@@ -23,6 +23,7 @@
       "ES2022",
       "dom"
     ],
+    "strictPropertyInitialization": false,
     "paths": {
       "@shared/*":["src/app/shared/*"], 
       "@app/*":["src/app/*"],

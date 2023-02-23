@@ -26,3 +26,15 @@
   }
 }
 
+
+
+@mixin question-mark($height, $width, $top, $bottom) {
+  &::before{
+    position: absolute;
+    content: url('~src/assets/images/share_img/question-mark.svg');
+    width: $height;
+    height: $width;
+    top:$top;
+    left: $bottom;
+  }
+}

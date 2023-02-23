@@ -52,19 +52,47 @@ a {
                 color: $backGround-dark;
             }
         }
-    }
-    .footer__form-btn {
-        background-color: $primary-gren-dark;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        padding: 11px;
-        width: 100%;
-        gap: 10px;
-        border-radius: 10px;
-        border: none;
-        color:white;
-        font-size: 14px;
-        line-height: 16px;
+        .footer__form-btn {
+            background-color: $primary-gren-dark;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 11px;
+            width: 100%;
+            gap: 10px;
+            border-radius: 10px;
+            border: none;
+            color:white;
+            font-size: 14px;
+            line-height: 16px;
+            transition: 0.4s ease;
+            &:disabled{
+                background-color:$primary-gren-light;
+            }
+        }
+        .error-validation{
+            color:red;
+            font-size: 12px;
+            margin: 5px 0;
+        }
     }
 }
+// button{
+//     .footer__form-btn {
+//         background-color: $primary-gren-dark;
+//         display: flex;
+//         justify-content: center;
+//         align-items: flex-start;
+//         padding: 11px;
+//         width: 100%;
+//         gap: 10px;
+//         border-radius: 10px;
+//         border: none;
+//         color:white;
+//         font-size: 14px;
+//         line-height: 16px;
+//         &:disabled{
+//             background-color:$primary-gren-transparent;
+//         }
+//     }
+// }

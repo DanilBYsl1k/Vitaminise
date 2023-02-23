@@ -1,18 +1,11 @@
 <div class="page__main-questions">
-    <div class="container container-btn">
-        <button  class="back-btn"><img src="/assets/images/main/arow_back.svg" alt="">Назад</button>
+    <div class="small-container">
+        <button routerLink="../"  class="back-btn"><img src="assets/images/main/arow_back.svg" alt="">Назад</button>
     </div>
     <section>
-        <div class="container content-container margin-top-1">
+        <div class="small-container content-container margin-top-1">
             <h1 class="h1-blue bold-raleway">Вся необхідна інформація </h1>
-            <h3 class="title-main_h3 bold-Raleway">Будь ласка, оберіть тему вашого запиту</h3>
-            <div class="main__box">
-<!--                <vtm-button class="first-btn" [nameQuestion]="'1'"></vtm-button>-->
-<!--                <vtm-button class="second-btn" [nameQuestion]="'2'"></vtm-button>-->
-<!--                <vtm-button class="three-btn" [nameQuestion]="'3'"></vtm-button>-->
-<!--                <vtm-button class="four-btn" [nameQuestion]="'4'"></vtm-button>-->
-<!--                <vtm-button class="last" [nameQuestion]="'last'"></vtm-button>-->
-            </div>
+            <router-outlet></router-outlet>
         </div>
     </section>
 </div>
