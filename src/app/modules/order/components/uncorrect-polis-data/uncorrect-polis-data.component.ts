@@ -1,6 +1,11 @@
 /* eslint-disable new-cap */
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
+  Component,
+  OnInit,
+} from '@angular/core';
 import {
   FormBuilder,
   FormControl,
@@ -42,8 +47,8 @@ interface IForm {
 export class UncorrectPolisDataComponent implements OnInit {
   isLoading$ = new BehaviorSubject<boolean>(false);
 
-  controls: IForm;
   form: FormGroup<IForm>;
+
   patternStateNum = /^[A-Z]{2}\d{4}[A-Z]{2}$/;
   patternVin = /^[A-Z0-9]+$/;
   patternType = /^B[1-5]$/;
@@ -53,13 +58,13 @@ export class UncorrectPolisDataComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private rout: Router,
+    private router: Router,
+    private cdr: ChangeDetectorRef,
     private checkCarService: CheckCarService
   ) {}
 
   ngOnInit(): void {
     this.initForm();
-    this.controls = this.form.controls;
     // console.log(this.rout.navigate([]));
   }
   private initForm(): void {
@@ -96,12 +101,16 @@ export class UncorrectPolisDataComponent implements OnInit {
   }
   // eslint-disable-next-line class-methods-use-this
   preShow(): void {
-    of(true)
-      .pipe(
-        tap(() => this.isLoading$.next(true)),
-        debounceTime(2000)
-        // tap(() => this.isLoading$.next(false))
-      )
-      .subscribe();
+    if (this.form.valid) {
+      of(true)
+        .pipe(
+          tap(() => this.isLoading$.next(true)),
+          delay(2000),
+          tap(() => this.isLoading$.next(false))
+        )
+        .subscribe(() => {
+          this.router.navigate(['/', 'main', 'buy-polis', 'data-insuranse']);
+        });
+    }
   }
 }

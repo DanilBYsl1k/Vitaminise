@@ -1,19 +1,14 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable class-methods-use-this */
 import {
   ChangeDetectionStrategy,
-  ChangeDetectorRef,
   Component,
   forwardRef,
   Input,
+  OnInit,
 } from '@angular/core';
 import {
-  AbstractControl,
   ControlValueAccessor,
   FormControl,
   NG_VALUE_ACCESSOR,
-  ValidationErrors,
-  Validator,
 } from '@angular/forms';
 
 @Component({
@@ -61,6 +56,7 @@ export class InputControlComponent<T = string> implements ControlValueAccessor {
   writeValue(value: T): void {
     this.control.patchValue(value);
   }
+
   registerOnChange(fn: (value: T) => void): void {
     this.onChange = fn;
   }

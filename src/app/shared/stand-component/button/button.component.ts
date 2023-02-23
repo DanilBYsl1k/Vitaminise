@@ -9,7 +9,12 @@ import {
 @Component({
   selector: 'vtm-button',
   template: `
-    <button [class]="type" (click)="submitted.emit()" class="bold-raleway">
+    <button
+      [class]="type"
+      [disabled]="disabled"
+      (click)="submitted.emit()"
+      class="bold-raleway"
+    >
       {{ label }}
     </button>
   `,
@@ -20,6 +25,7 @@ import {
 export class ButtonComponent {
   @Input() label!: string;
   @Input() type!: 'primary' | 'secondary';
+  @Input() disabled: boolean = false;
 
   @Output() submitted = new EventEmitter<void>();
 }

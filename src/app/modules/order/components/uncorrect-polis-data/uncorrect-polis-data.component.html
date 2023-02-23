@@ -1,80 +1,91 @@
 <div class="page-uncorrect-data">
+
     <div class="title-h3-polis">
         <img src="assets/images/share_img/Alert.svg" alt="">
         <p>Наразі можливо отримати страхування тільки для 🚗 ЛЕГКОВИХ автомобілів. </p>
     </div>
-        <form class="form " [formGroup]="form">
-            <div class="flex-box-input">
-                <vtm-input-control  
-                    label="vin" 
-                    [invalid]="controls.vin.invalid"
-                    placeholder="WBA3B9C5XDF586032"
-                    formControlName="vin">
-                    <div class="invalid-alert">Мінімальна довжина 17 символів</div>
-                </vtm-input-control>
-                <vtm-input-control 
-                    label="Марка"
-                    [invalid]="controls.mark.invalid"
-                    placeholder="BMW"
-                    formControlName="mark">
-                    <div class="invalid-alert" *ngIf="controls.mark.invalid">Вкажіть марку авто</div>
-                </vtm-input-control>
-            </div>
+        <form class="form" [formGroup]="form">
+          <div class="flex flex-row">
+
+            <vtm-input-control
+              class="w-full margin-right-2"
+              label="vin"
+              placeholder="WBA3B9C5XDF586032"
+              formControlName="vin">
+
+              <div class="invalid-alert" *ngIf="form.get('vin')?.hasError('required') && form.controls.vin.dirty">
+                Мінімальна довжина 17 символів
+              </div>
+
+            </vtm-input-control>
+            <vtm-input-control
+              class="w-full margin-left-2"
+              label="Марка"
+              placeholder="BMW"
+              formControlName="mark">
+              <div
+                *ngIf="form.get('mark')?.hasError('required') && form.controls.mark.dirty" class="invalid-alert">
+                Вкажіть марку авто
+              </div>
+            </vtm-input-control>
+
+          </div>
+
             <div class="margin-top-3" >
-                <vtm-input-control  
-                    label="Модель" 
-                    [invalid]="controls.model.invalid"
+                <vtm-input-control
+                    label="Модель"
                     placeholder="335XI xDrive XLT 30e Twin Power Turbo"
                     formControlName="model">
-                    <div class="invalid-alert" *ngIf="controls.model.invalid">Вкажіть модель вашого авто</div>
+                    <div class="invalid-alert"
+                         *ngIf="form.get('model')?.hasError('required') && form.controls.model.dirty">
+                      Вкажіть модель вашого авто
+                    </div>
                 </vtm-input-control>
             </div>
             <div class="flex-box-input margin-top-3">
-                <vtm-input-control 
-                    label="Рік випуску" 
-                    [invalid]="controls.graduationYear.invalid" 
+                <vtm-input-control
+                    label="Рік випуску"
                     placeholder="2012"
                     formControlName="graduationYear">
-                    <div class="invalid-alert" *ngIf="controls.graduationYear.invalid">Вкажіть правильну дату</div>
+                    <div class="invalid-alert" *ngIf="form.get('graduationYear')?.hasError('required') && form.controls.graduationYear.dirty">Вкажіть правильну дату</div>
                 </vtm-input-control>
-                <vtm-input-control 
-                    label="Об’єм двигуна" 
-                    [invalid]="controls.engineCapacity.invalid" 
+                <vtm-input-control
+                    label="Об’єм двигуна"
                     placeholder="2993"
                     formControlName="engineCapacity">
-                    <div class="invalid-alert" *ngIf="controls.engineCapacity.invalid">Вкажіть коректний Об’єм двигуна</div>
+                    <div class="invalid-alert" *ngIf="form.get('engineCapacity')?.hasError('required') && form.controls.engineCapacity.dirty">Вкажіть коректний Об’єм двигуна</div>
                 </vtm-input-control>
-                <vtm-input-control 
-                    label="Держномер" 
-                    [invalid]="controls.stateNum.invalid" 
+                <vtm-input-control
+                    label="Держномер"
                     placeholder="АА3443ВВ"
                     formControlName="stateNum">
-                    <div class="invalid-alert" *ngIf="controls.stateNum.invalid">Вкажіть коректний номер</div>
-                    <div class="invalid-alert" *ngIf="controls.stateNum.invalid">Вкажіть коректний номер</div>
+                    <div class="invalid-alert" *ngIf="form.get('stateNum')?.hasError('required') && form.controls.stateNum.dirty">Вкажіть коректний номер</div>
+                    <div class="invalid-alert" *ngIf="form.get('stateNum')?.hasError('pattern') && form.controls.stateNum.dirty">Вкажіть коректний номер</div>
                 </vtm-input-control>
-                <vtm-input-control 
-                    label="Тип" 
-                    [invalid]="controls.type.invalid"
+                <vtm-input-control
+                    label="Тип"
                     placeholder="B3"
                     formControlName="type">
-                    <div class="invalid-alert" *ngIf="controls.type.invalid">Вкажіть відповідний тип </div>
+                    <div class="invalid-alert" *ngIf="form.get('type')?.hasError('required') && form.controls.type.dirty">Вкажіть відповідний тип </div>
                 </vtm-input-control>
             </div>
             <div class="margin-top-3">
-                <vtm-input-control 
-                    label="Адреса реєстрації"   
-                    [invalid]="controls.registrationAddress.invalid"
+                <vtm-input-control
+                    label="Адреса реєстрації"
                     placeholder="М.КИЇВ ОБОЛОНСЬКИЙ"
                     formControlName="registrationAddress">
-                    <div class="invalid-alert" *ngIf="controls.registrationAddress.invalid">Вкажість справжню адресу</div>
+                    <div class="invalid-alert" *ngIf="form.get('registrationAddress')?.hasError('required') && form.controls.registrationAddress.dirty">Вкажість справжню адресу</div>
                 </vtm-input-control>
             </div>
             <div class="btn-box ">
-                <button (click)="preShow()" type="submit" class="btn-form margin-top-5" >Все вірно, продовжити</button>
+                <button [disabled]="form.invalid"  (click)="preShow()" type="submit" class="btn-form margin-top-5" >Все вірно, продовжити</button>
             </div>
-            <!-- [disabled]="form.invalid" -->
+            <!--  -->
         </form>
-        <div class="invalid-alert" *ngIf="controls.registrationAddress.touched">Вкажість справжню адресу </div>
+<!--        <div class="invalid-alert" *ngIf="form.controls.registrationAddress.touched">Вкажість справжню адресу </div>-->
 </div>
-routerLink="../data-insuranse"
-<vtm-preloader *ngIf="isLoading$ | async" label="Шукаємо дані транспортного засобу в базі МВС та МТСБУ"></vtm-preloader>
+
+<vtm-preloader
+  *ngIf="isLoading$ | async"
+  label="Шукаємо дані транспортного засобу в базі МВС та МТСБУ">
+</vtm-preloader>

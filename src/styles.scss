@@ -43,3 +43,20 @@ h1 {
 .field-error + .field-error {
     display: none;
 }
+
+
+.flex {
+  display: flex !important;
+}
+
+.flex-row {
+  flex-direction: row !important;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.invalid-alert {
+  color: red;
+}

@@ -1,4 +1,6 @@
-input{
+.input-field {
+
+  input {
     width: 100%;
     border: 1px solid gray;
     padding: 10px;
@@ -7,16 +9,24 @@ input{
     border-radius: 10px;
     font-family: 'Open Sans';
     outline: none;
-}
-h5{
-    padding-bottom:10px;
-}
-.invalid{
-    border: red solid 1px;
-}
-label{
-    h5{
-        margin: 0;
-        font-size: 16px;
+    margin-top: 6px;
+  }
+
+  label {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 140%;
+    margin-bottom: 6px;
+  }
+
+  &:has(.invalid-alert) {
+
+    input {
+      border: red solid 1px;
     }
+
+    label {
+      color: red;
+    }
+  }
 }

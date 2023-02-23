@@ -4,9 +4,11 @@
     flex-direction: column;
     align-items: center;
     min-height: 90vh;
+
     @include phone_query{
         padding: 0 20px;
     }
+
     .title-h3-polis{
         display: flex;
         align-items: center;
@@ -14,6 +16,7 @@
             margin: 0 10px;
         }
     }
+
     .btn-box{
         width: 386px;
         margin: auto;
@@ -21,10 +24,13 @@
             width: 100%;
         }
     }
+
     form{
         width: 100%;
         margin: 20px 0;
+
         .flex-box-input{
+
             display:flex;
             gap: 15px;
             justify-content: space-between;
@@ -32,9 +38,11 @@
                 display: flex;
                 flex-direction: column;
             }
+
             vtm-input-control{
-                width: 100%;
+              width: 100%;
             }
+
             .btn-form{
                 &:disabled{
                     background-color: red;
@@ -44,6 +52,6 @@
         }
     }
     .invalid-alert{
-        text-align: center;
+
     }
 }
