@@ -8,7 +8,19 @@ import {
   Validators,
 } from '@angular/forms';
 import { Router } from '@angular/router';
-import { delay, Observable, Subscription } from 'rxjs';
+import {
+  BehaviorSubject,
+  debounce,
+  debounceTime,
+  delay,
+  distinctUntilChanged,
+  Observable,
+  of,
+  Subscription,
+  tap,
+  timer,
+} from 'rxjs';
+import { CheckCarService } from '../../services/check-car.service';
 
 interface IForm {
   vin: FormControl<null | string>;
@@ -28,7 +40,8 @@ interface IForm {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class UncorrectPolisDataComponent implements OnInit {
-  isLoading = false;
+  isLoading$ = new BehaviorSubject<boolean>(false);
+
   controls: IForm;
   form: FormGroup<IForm>;
   patternStateNum = /^[A-Z]{2}\d{4}[A-Z]{2}$/;
@@ -38,7 +51,11 @@ export class UncorrectPolisDataComponent implements OnInit {
   patternengineCapacity = /^\d{3,4}$/;
   patternGraduationYear = /^\d{4}$/;
 
-  constructor(private fb: FormBuilder, private rout: Router) {}
+  constructor(
+    private fb: FormBuilder,
+    private rout: Router,
+    private checkCarService: CheckCarService
+  ) {}
 
   ngOnInit(): void {
     this.initForm();
@@ -77,18 +94,14 @@ export class UncorrectPolisDataComponent implements OnInit {
       registrationAddress: this.fb.control(null, [Validators.required]),
     }) as FormGroup<IForm>;
   }
-  onButtonClick() {
-    this.isLoading = true;
-    this.observable.pipe(delay(2000)).subscribe({
-      next(x) {},
-      complete() {},
-    });
+  // eslint-disable-next-line class-methods-use-this
+  preShow(): void {
+    of(true)
+      .pipe(
+        tap(() => this.isLoading$.next(true)),
+        debounceTime(2000)
+        // tap(() => this.isLoading$.next(false))
+      )
+      .subscribe();
   }
-
-  observable = new Observable((subscriber) => {
-    subscriber.next((this.isLoading = false));
-    setTimeout(() => {
-      subscriber.complete();
-    }, 4000);
-  });
 }

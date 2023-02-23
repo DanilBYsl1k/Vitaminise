@@ -70,11 +70,11 @@
                 </vtm-input-control>
             </div>
             <div class="btn-box ">
-                <button (click)="onButtonClick()" type="submit" class="btn-form margin-top-5" >Все вірно, продовжити</button>
+                <button (click)="preShow()" type="submit" class="btn-form margin-top-5" >Все вірно, продовжити</button>
             </div>
             <!-- [disabled]="form.invalid" -->
         </form>
         <div class="invalid-alert" *ngIf="controls.registrationAddress.touched">Вкажість справжню адресу </div>
 </div>
 routerLink="../data-insuranse"
-<vtm-preloader *ngIf="isLoading" label="Шукаємо дані транспортного засобу в базі МВС та МТСБУ"></vtm-preloader>
+<vtm-preloader *ngIf="isLoading$ | async" label="Шукаємо дані транспортного засобу в базі МВС та МТСБУ"></vtm-preloader>
