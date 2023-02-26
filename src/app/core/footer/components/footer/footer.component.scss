@@ -1,0 +1,43 @@
+footer {
+  &.footer {
+    width: 100%;
+    padding: 50px 0;
+    background: #E7E8F5;
+  }
+
+  .footer__container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .footer__list-header {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+
+    img {
+      &.logo_orange {
+        width: 220px;
+        height: 34px;
+        margin-bottom: 12px;
+        object-fit: contain;
+      }
+    }
+
+    &:not(:has(> img)) {
+      margin-top: 10px;
+    }
+  }
+
+  .footer__item {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    margin-top: 8px;
+
+    &:first-child {
+      margin-top: 20px;
+    }
+  }
+}

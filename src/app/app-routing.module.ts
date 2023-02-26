@@ -1,16 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from '@app/app.component';
+import { ROUTES } from '@core/constants/routes.constant';
 
 const routes: Routes = [
   {
     path: '',
-    component: AppComponent,
+    loadChildren: () =>
+      import('@modules/welcome/welcome.module').then((m) => m.WelcomeModule),
   },
   {
-    path: 'main',
+    path: ROUTES.QUESTION.MAIN,
     loadChildren: () =>
-      import('@modules/main/main.module').then((m) => m.MainModule),
+      import('@modules/question/question.module').then((m) => m.QuestionModule),
   },
 ];
 

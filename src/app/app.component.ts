@@ -2,7 +2,9 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'vtm-root',
-  templateUrl: './app.component.html',
+  template: `
+    <vtm-layout-default></vtm-layout-default>
+  `,
   styleUrls: ['./app.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

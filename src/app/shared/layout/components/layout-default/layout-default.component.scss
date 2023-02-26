@@ -1,0 +1,31 @@
+.vtm-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  background: #F6F6F6;
+
+  &__background-image {
+    background: url("~src/assets/images/layout/background.png") top no-repeat;
+    -o-background-size: 100% auto;
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    background-size: 100% auto;
+    flex: 1 1 auto;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 32px;
+  }
+
+  &__content {
+    max-width: 930px;
+    width: 100%;
+    background: #FFFFFF;
+    margin: 45px auto 0;
+    border-radius: 10px;
+    padding: 60px 135px 0 135px;
+  }
+}

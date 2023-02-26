@@ -1,13 +1,10 @@
-@import 'src/styles/index.scss';
 .page-uncorrect-data{
     display: flex;//uncorect width in examples
     flex-direction: column;
     align-items: center;
     min-height: 90vh;
 
-    @include phone_query{
-        padding: 0 20px;
-    }
+
 
     .title-h3-polis{
         display: flex;
@@ -20,9 +17,7 @@
     .btn-box{
         width: 386px;
         margin: auto;
-        @include phone_query{
-            width: 100%;
-        }
+
     }
 
     form{
@@ -34,14 +29,8 @@
             display:flex;
             gap: 15px;
             justify-content: space-between;
-            @include phone_query{
-                display: flex;
-                flex-direction: column;
-            }
 
-            vtm-input-control{
-              width: 100%;
-            }
+
 
             .btn-form{
                 &:disabled{
