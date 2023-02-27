@@ -4,10 +4,10 @@ import { PolisPagesComponent } from '@modules/order/components/polis-pages/polis
 import { OrderRoutingModule } from '@modules/order/order-routeng.module';
 import { BeginPolisComponent } from '@modules/order/components/begin-polis/begin-polis.component';
 import { UncorrectPolisDataComponent } from '@modules/order/components/uncorrect-polis-data/uncorrect-polis-data.component';
-import { ButtonComponent } from '@shared/stand-component/button/button.component';
 import { DataInsuredComponent } from '@modules/order/components/data-insured/data-insured.component';
-import { SharedModule } from '@shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PreloaderModule } from '@shared/stand-component/preloader/preloader.module';
+import { InputModule } from '@shared/stand-component/input/input.module';
 
 @NgModule({
   declarations: [
@@ -19,9 +19,9 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     OrderRoutingModule,
-    ButtonComponent,
-    SharedModule,
     ReactiveFormsModule,
+    PreloaderModule,
+    InputModule,
   ],
 })
 export class OrderModule {}

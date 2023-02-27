@@ -13,6 +13,12 @@ const routes: Routes = [
     loadChildren: () =>
       import('@modules/question/question.module').then((m) => m.QuestionModule),
   },
+  {
+    path: ROUTES.QUESTION.INSURANCE,
+    loadChildren: () =>
+      import('@modules/order/order.module').then((m) => m.OrderModule),
+  },
+  { path: '**', redirectTo: '' },
 ];
 
 @NgModule({

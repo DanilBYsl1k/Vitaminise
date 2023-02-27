@@ -1,8 +1,9 @@
+@import '/src/styles.scss';
 .welcome-wrapper {
   &__title {
     text-align: center;
+    color: $blue-dark;
   }
-
   &__subtitle {
     text-align: center;
   }

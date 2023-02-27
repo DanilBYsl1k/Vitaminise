@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;500;600;700&display=swap');
-@import "src/styles/index";
+@import "styles/index";
+
 
 html, body, .vtm-app { height: 100%; }
 body { margin: 0; font-family: 'Raleway', sans-serif; }
@@ -9,7 +10,6 @@ h1 {
   font-size: 60px;
   line-height: 120%;
 }
-
 h3 {
   font-weight: 700;
   font-size: 28px;

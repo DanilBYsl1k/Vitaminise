@@ -8,7 +8,7 @@
   <h2>Введіть державний номер авто</h2>
 
   <div class="flex flex-row">
-    <vtm-input-control [formControl]="search"> </vtm-input-control>
+    <!-- <vtm-input-control [formControl]="search"> </vtm-input-control> -->
     <img *ngIf="loading$ | async" src="assets/images/order-page/preloader.svg" alt="preloaded">
   </div>
   <div>
@@ -57,7 +57,7 @@
     </li>
   </ul>
   <div class="btn-box">
-    <vtm-button [disabled]="!isSearchValue" routerLink="uncorrect-data" label="Дані невірні, ввести вручну" type="secondary"></vtm-button>
-    <vtm-button [disabled]="!isSearchValue" routerLink="data-insuranse" label="Все вірно, продовжити" type="primary"></vtm-button>
+    <!-- <vtm-button [disabled]="!isSearchValue" routerLink="uncorrect-data" label="Дані невірні, ввести вручну" type="secondary"></vtm-button> -->
+    <!-- <vtm-button [disabled]="!isSearchValue" routerLink="data-insuranse" label="Все вірно, продовжити" type="primary"></vtm-button> -->
   </div>
 </div>

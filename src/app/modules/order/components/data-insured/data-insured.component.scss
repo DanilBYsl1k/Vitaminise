@@ -2,10 +2,10 @@
 .page-insured{
     width: 525px;
     margin: auto;
-    @include phone_query{
-        width: 100%;
-        padding: 0 20px;
-    }
+    // @include phone_query{
+    //     width: 100%;
+    //     padding: 0 20px;
+    // }
     .title-h2-data-box{
         display: flex;
         justify-content: center;
@@ -29,11 +29,11 @@
         display: flex;
         flex-wrap: wrap;
         gap: 20px;
-        @include phone_query{
-            vtm-input-control{
-                width: 100% !important; 
-            }
-        }
+        // @include phone_query{
+        //     vtm-input-control{
+        //         width: 100% !important; 
+        //     }
+        // }
     }
     .checkbox-box{
         width: 100%;
