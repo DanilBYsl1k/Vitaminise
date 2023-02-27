@@ -8,9 +8,8 @@ describe('UncorrectPolisDataComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ UncorrectPolisDataComponent ]
-    })
-    .compileComponents();
+      declarations: [UncorrectPolisDataComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(UncorrectPolisDataComponent);
     component = fixture.componentInstance;

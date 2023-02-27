@@ -4,8 +4,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   selector: 'vtm-insurance',
   templateUrl: './insurance.component.html',
   styleUrls: ['./insurance.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class InsuranceComponent {
-
-}
+export class InsuranceComponent {}

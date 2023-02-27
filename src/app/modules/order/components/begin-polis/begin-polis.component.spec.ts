@@ -8,9 +8,8 @@ describe('BeginPolisComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BeginPolisComponent ]
-    })
-    .compileComponents();
+      declarations: [BeginPolisComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(BeginPolisComponent);
     component = fixture.componentInstance;
