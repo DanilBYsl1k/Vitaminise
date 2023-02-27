@@ -1,0 +1,24 @@
+button {
+  &.button-big {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+    padding: 27px 0;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 24px rgba(114, 121, 197, 0.5);
+    background: #FFFFFF;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+
+    &:disabled {
+      background: #6EA438;
+    }
+
+    &:hover, &:active {
+      color: #FFFFFF;
+      background: #92C84A;
+    }
+  }
+}
