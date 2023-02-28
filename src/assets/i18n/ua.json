@@ -32,5 +32,32 @@
     "INSURANCE_PAGE": {
       "TITLE": "Автоцивілка"
     }
+  },
+  
+  "OWN-POLIS_PAGE":{
+    "TITLE":"Вітаю,",
+    "MY_POLISES":"Ваші поліси",
+    "STATUS":"Статус",
+    "NAME":"Назва",
+    "BUYNEW-POLIS":"Придбати новий поліс",
+    "APPLY":"Подать заявку",
+    "CONTACTS_US":"Зв’язатись з нами",
+    "POLISES":"Поліси",
+    "PROFILES":"Профіль",
+    "ITEM3":"Item 3",
+    "ITEM4":"Item 4",
+    "ITEM5":"Item 5"
+  },
+  "POLIS-STATUS_PAGE":{
+    "AVTOSIVILKA_FROM":"Автоцивілка від",
+    "COVERAGE_HEALTHY":"Покриття відповідальності за здоров'ям до 320 000 грн",
+    "COVERAGE_PROPERTY":"Покриття відповідальності по майну до 160 000 грн",
+    "ORGANIZATION_HELP":"Організація медичної допомоги",
+    "ADDITION_SERVICE":"Додаткові послуги",
+    "LOOK_CONTRACT":"Подивитись договір",
+    "SEND-EMAIL":"Надіслати на Email",
+    "LOOK-MTSBY":"Подивитись поліс на МТСБУ",
+    "MORE-INFO":"Хочеш мати всю інформацію про поліси та швидко",
+    "PERSONAL-ACCOUNT":"Перейти в особистий кабінет"
   }
 }

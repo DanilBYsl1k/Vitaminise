@@ -15,6 +15,7 @@ import {
       (click)="submitted.emit()"
       class="bold-raleway"
     >
+      <ng-content></ng-content>
       {{ label }}
     </button>
   `,
@@ -24,8 +25,9 @@ import {
 })
 export class ButtonComponent {
   @Input() label!: string;
-  @Input() type!: 'primary' | 'secondary';
+  @Input() type!: 'primary' | 'secondary' | 'other' | 'link';
   @Input() disabled: boolean = false;
+  @Input() img: boolean = false;
 
   @Output() submitted = new EventEmitter<void>();
 }

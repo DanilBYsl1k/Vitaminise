@@ -1,0 +1,39 @@
+
+
+button {
+  width: 100%;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-family: 'Raleway';
+  font-weight: 700;
+font-size: 16px;
+}
+.primary{
+  padding: 15px;
+
+  color: #FFFFFF;
+  background: #FF931E;
+  border-radius: 16px;
+  box-shadow: 0px 4px 20px rgba(123, 123, 126, 0.3);
+}
+
+.secondary{
+  padding: 13px;
+  color: #FF931E;
+  border-radius: 16px;
+  border: 2px solid #FF931E;
+  box-shadow: 0px 4px 20px rgba(123, 123, 126, 0.3);
+}
+
+.link{
+  background: #FFEFDD;
+  border-radius: 16px;
+  padding: 16px;
+  color: #FF931E;
+  width: 102px;
+}
+
+.other{
+
+}

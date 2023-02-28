@@ -1,0 +1,52 @@
+.own-polis-wrapper{
+    &__your-polises{
+        // gap:10px
+        img{
+            width: 115px;
+            height: 30px;
+        }
+    }
+    &__box-polises{
+        margin: auto;
+        border: 1px solid #9B9B9B;
+        border-radius: 10px;
+        padding: 15px 28px;
+        width: 390px;
+        .name-status{
+            cursor: pointer;
+        }
+        p{
+            font-weight: 700;
+            font-size: 16px;
+        }
+    }
+    &__date{
+        font-weight: 700;
+        font-size: 16px;
+    }
+    &__box-btn{
+        width: 100%;
+        margin: 30px 0;
+        vtm-button{
+            margin: auto;
+            width: 440px;
+            &:last-child{
+                margin-top: 10px;
+            }
+        }
+    }
+    &__list-nav{
+        list-style: none;
+        padding: 0;
+        border-bottom: 1px solid #000000;
+        li{
+            cursor: pointer;
+            padding: 10px 20px;
+            font-weight: 700;
+            font-size: 16px;
+        }
+    }
+}
+.active-link{
+    border-bottom:6px solid #FF931E;
+}

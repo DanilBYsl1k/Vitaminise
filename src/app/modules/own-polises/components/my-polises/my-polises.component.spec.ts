@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ButtonRouteComponent } from './button-route.component';
+import { MyPolisesComponent } from './my-polises.component';
 
-describe('ButtonRouteComponent', () => {
-  let component: ButtonRouteComponent;
-  let fixture: ComponentFixture<ButtonRouteComponent>;
+describe('MyPolisesComponent', () => {
+  let component: MyPolisesComponent;
+  let fixture: ComponentFixture<MyPolisesComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ButtonRouteComponent],
+      declarations: [MyPolisesComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(ButtonRouteComponent);
+    fixture = TestBed.createComponent(MyPolisesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

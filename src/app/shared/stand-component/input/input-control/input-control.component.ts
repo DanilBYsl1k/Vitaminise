@@ -3,7 +3,6 @@ import {
   Component,
   forwardRef,
   Input,
-  OnInit,
 } from '@angular/core';
 import {
   ControlValueAccessor,

@@ -1,0 +1,82 @@
+.polis-status-wrapper{
+    &__title{
+        color: #0F1178;
+        text-align: center;
+    }
+    &__my-info-car{
+        p{
+            margin: 0;
+        }
+    }
+    &__person-info{
+        padding-bottom:7px ;
+    }
+    &__car-info{
+        padding: 12px 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+        span{
+            margin-right: 15px;
+        }
+    }
+    &__insurance{
+        border: 1px solid #9B9B9B;
+        border-radius: 10px;
+        padding: 20px 40px;
+        img{
+            width: 229px;
+        }
+        h4{
+            font-size: 16px;
+        }
+    }
+    &__list-offer{
+        padding:0 20px;
+        list-style: none;
+        li{
+            position: relative;
+            margin: 10px 0;
+            &::before{
+                position: absolute;
+                content: url(~src/assets/images/share_img/check-mark.svg);
+                left: -25px;
+                top: 0;
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+    &__addition-service{
+        padding: 0;
+        list-style: none;
+        font-weight: 700;
+        font-size: 16px;
+        li{
+            margin: 10px 0;
+        }
+    }
+    &__box-btn{
+        vtm-button{
+            width: 100%;
+        }
+    }
+    &__check-contract{
+        text-align: center;
+        a{
+            font-family: 'Raleway';
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 16px;
+            color: #FF931E;
+            text-decoration: none;
+        }
+    }
+    &__else-info{
+        background: #F2F9E9;
+        border: 1px solid #9B9B9B;
+        border-radius: 10px;
+        padding: 20px 30px;
+    }
+    &__box-btn-else-info{        
+        width: 274px;
+    }
+}

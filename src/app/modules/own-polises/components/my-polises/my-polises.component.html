@@ -1,0 +1,37 @@
+<div class="own-polis-wrapper">
+    <h1>{{'OWN-POLIS_PAGE.TITLE'| translate }} {{user}}</h1>
+    <h3>{{'OWN-POLIS_PAGE.MY_POLISES'|translate}}</h3>
+    <section class="fx fx-wrap own-polis-wrapper__your-polises">
+        <div class="own-polis-wrapper__box-polises">
+            <div class="fx align-center justify-content-between">
+                <img src="assets/images/own-polis/logo-company.png" alt="">
+                <p class="name-status" routerLink="polis-status">{{'OWN-POLIS_PAGE.NAME'|translate}}</p>
+                <p>{{'OWN-POLIS_PAGE.STATUS'|translate}}</p>
+            </div>
+            <div class="own-polis-wrapper__date">{{dateBegin|date}} - {{dateEnding|date}}</div>
+        </div>
+        <div class="own-polis-wrapper__box-polises">
+            <div class="fx align-center justify-content-between">
+                <img src="assets/images/own-polis/logo-company.png" alt="">
+                <p class="name-status" routerLink="polis-status">{{'OWN-POLIS_PAGE.NAME'|translate}}</p>
+                <p>{{'OWN-POLIS_PAGE.STATUS'|translate}}</p>
+            </div>
+            <div class="own-polis-wrapper__date">{{dateBegin|date}} - {{dateEnding|date}}</div>
+        </div>
+        <div class="own-polis-wrapper__box-btn fx fx-wrap">
+            <vtm-button type="primary" label="{{'OWN-POLIS_PAGE.BUYNEW-POLIS'|translate}}"></vtm-button>
+            <vtm-button type="primary" label="{{'OWN-POLIS_PAGE.APPLY'|translate}}"></vtm-button>
+            <vtm-button type="primary" label="{{'OWN-POLIS_PAGE.CONTACTS_US'|translate}}"></vtm-button>
+        </div>
+    </section>
+    <section>
+        <ul class="own-polis-wrapper__list-nav fx justify-content-between">
+            <li routerLink="polises" routerLinkActive="active-link">{{'OWN-POLIS_PAGE.POLISES'|translate}}</li>
+            <li routerLink="profile" routerLinkActive="active-link">{{'OWN-POLIS_PAGE.PROFILES'|translate}}</li>
+            <li routerLinkActive="">{{'OWN-POLIS_PAGE.ITEM3'|translate}}</li>
+            <li routerLinkActive="">{{'OWN-POLIS_PAGE.ITEM4'|translate}}</li>
+            <li routerLinkActive="">{{'OWN-POLIS_PAGE.ITEM5'|translate}}</li>
+        </ul>
+        <router-outlet></router-outlet>
+    </section>
+</div>

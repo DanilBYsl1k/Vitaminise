@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ROUTES } from '@core/constants/routes.constant';
+// import { MyPolisesComponent } from './modules/own-polises/components/my-polises/my-polises.component';
 
 const routes: Routes = [
   {
@@ -18,7 +19,15 @@ const routes: Routes = [
     loadChildren: () =>
       import('@modules/order/order.module').then((m) => m.OrderModule),
   },
-  { path: '**', redirectTo: '' },
+  {
+    path: ROUTES.USERPOLISES.OWNPOLISES,
+    loadChildren: () =>
+      import('@modules/own-polises/own-polises.module').then(
+        (m) => m.OwnPolisesModule
+      ),
+  },
+  // { path: ROUTES.QUESTION.USERPOLISES, component: MyPolisesComponent },
+  // { path: '**', redirectTo: '' },
 ];
 
 @NgModule({
