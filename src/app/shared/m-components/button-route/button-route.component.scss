@@ -1,5 +1,6 @@
 button {
   &.button-big {
+    font-family: 'Raleway';
     font-weight: 600;
     font-size: 20px;
     line-height: 120%;
@@ -11,6 +12,7 @@ button {
     width: 100%;
     border: none;
     cursor: pointer;
+    transition: 0.15s ease;
 
     &:disabled {
       background: #6EA438;

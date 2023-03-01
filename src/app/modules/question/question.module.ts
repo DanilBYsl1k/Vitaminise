@@ -7,6 +7,8 @@ import { QuestionComponent } from '@modules/question/components/question/questio
 import { InsuranceComponent } from '@modules/question/components/insurance/insurance.component';
 import { InfoComponent } from '@modules/question/components/info/info.component';
 import { ButtonRouteComponent } from '@shared/m-components/button-route/button-route.component';
+import { ExpansionDirective } from '@app/core/derectives/expansion/expansion.directive';
+import { ButtonComponent } from '@shared/stand-component/button/button.component';
 
 @NgModule({
   declarations: [QuestionComponent, InsuranceComponent, InfoComponent],
@@ -15,6 +17,8 @@ import { ButtonRouteComponent } from '@shared/m-components/button-route/button-r
     TranslateModule,
     QuestionsModule,
     ButtonRouteComponent,
+    ExpansionDirective,
+    ButtonComponent,
   ],
 })
 export class QuestionModule {}

@@ -7,4 +7,11 @@
   &__subtitle {
     text-align: center;
   }
+  &__box-btn{
+    max-width: 840px;
+    vtm-button-route{
+      width: 388px;
+      margin: 10px;
+    }
+  }
 }

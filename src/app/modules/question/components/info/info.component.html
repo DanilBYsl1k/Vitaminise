@@ -1,10 +1,32 @@
 <div class="info-wrapper">
   <h3 class="info-wrapper__title">{{ 'QUESTION_PAGE.INFO_PAGE.TITLE' | translate }}</h3>
-
   <div class="fx align-center fx-wrap justify-content-between info-wrapper__routes">
-    <vtm-button-route class="margin-left-2" [label]="'Придбати поліс'"></vtm-button-route>
-    <vtm-button-route class="margin-right-2" [label]="'Переглянути мої страховки'"></vtm-button-route>
-    <vtm-button-route class="margin-top-3 margin-left-2" [label]="'Дізнатись більше про сервіс'"></vtm-button-route>
-    <vtm-button-route class="margin-top-3 margin-right-2" [label]="'Подати заявку'"></vtm-button-route>
+    <vtm-button-route routerLink="/question/insurance" class="margin-left-2" label="{{'QUESTION_PAGE.INFO_PAGE.BUTTONS.MORE' | translate }}"></vtm-button-route>
+    <vtm-button-route class="margin-right-2" label="{{'QUESTION_PAGE.INFO_PAGE.BUTTONS.WHERE-BUY' | translate }}"></vtm-button-route>
+    <vtm-button-route class="margin-top-3 margin-left-2" label="{{'QUESTION_PAGE.INFO_PAGE.BUTTONS.DTP' | translate }}"></vtm-button-route>
+    <vtm-button-route class="margin-top-3 margin-right-2" label="{{'QUESTION_PAGE.INFO_PAGE.BUTTONS.ABOUT-SYSTEM' | translate }}"></vtm-button-route>
+    <div class="info-wrapper__other-btn">
+      <div class="info-wrapper__dropdown-box">
+        <button vtmExpansion>{{'QUESTION_PAGE.INFO_PAGE.BUTTONS.OTHER-QUESTION' | translate }}</button>
+        <ul class="info-dropdown">
+          <li>
+            <b>{{'QUESTION_PAGE.INFO_PAGE.TEXT.OTHER-QUESTION.CORRECT.TITLE' | translate }}</b>
+            {{'QUESTION_PAGE.INFO_PAGE.TEXT.OTHER-QUESTION.CORRECT.TEXT' | translate }}
+          </li>
+          <li>
+            <b>{{'QUESTION_PAGE.INFO_PAGE.TEXT.OTHER-QUESTION.HOW-LONG.TITLE' | translate }}</b>
+            {{'QUESTION_PAGE.INFO_PAGE.TEXT.OTHER-QUESTION.HOW-LONG.TEXT' | translate }}
+          </li>
+          <li>
+            <b>{{'QUESTION_PAGE.INFO_PAGE.TEXT.OTHER-QUESTION.I`MNOT-CAR-OWNER.TITLE' | translate }}</b>
+            {{'QUESTION_PAGE.INFO_PAGE.TEXT.OTHER-QUESTION.I`MNOT-CAR-OWNER.TEXT' | translate }}
+          </li>
+          <li>
+            <b>{{'QUESTION_PAGE.INFO_PAGE.TEXT.OTHER-QUESTION.CHANGE-NUMBER.TITLE' | translate }}</b>
+            {{'QUESTION_PAGE.INFO_PAGE.TEXT.OTHER-QUESTION.CHANGE-NUMBER.TEXT' | translate }}
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>

@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ROUTES } from '@core/constants/routes.constant';
-// import { MyPolisesComponent } from './modules/own-polises/components/my-polises/my-polises.component';
 
 const routes: Routes = [
   {
@@ -26,8 +25,7 @@ const routes: Routes = [
         (m) => m.OwnPolisesModule
       ),
   },
-  // { path: ROUTES.QUESTION.USERPOLISES, component: MyPolisesComponent },
-  // { path: '**', redirectTo: '' },
+  { path: '**', redirectTo: '' },
 ];
 
 @NgModule({

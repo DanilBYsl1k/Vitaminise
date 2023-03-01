@@ -1,18 +1,21 @@
 <div class="page-begin-polis">
-  <p class="title-p"> Ми зробили процес придбання поліса максимально зручним для Вас, всю можливу інформацію ми будемо
+  <p class="page-begin-polis__title-p"> Ми зробили процес придбання поліса максимально зручним для Вас, всю можливу інформацію ми будемо
     брати із державних реєстрів.</p>
-  <div class="title-h3-polis">
+  <div class="page-begin-polis__title-polis fx alight-item-center">
     <img src="assets/images/share_img/Alert.svg" alt="">
     <p>Наразі можливо отримати страхування тільки для 🚗 ЛЕГКОВИХ автомобілів. </p>
   </div>
   <h2>Введіть державний номер авто</h2>
-
-  <div class="flex flex-row">
-    <!-- <vtm-input-control [formControl]="search"> </vtm-input-control> -->
-    <img *ngIf="loading$ | async" src="assets/images/order-page/preloader.svg" alt="preloaded">
+  <div class="fx justify-content-center page-begin-polis__input-box">
+    <div class="flex-row page-begin-polis__wrapper-input fx">
+      <div class="flex-row page-begin-polis__flag fx-column justify-content-center">
+        <img src="assets/images/order-page/flag-ua.svg" alt=""><b>UA</b>
+      </div>
+      <input type="text" name="" [formControl]="search" placeholder="АА1111АА">
+    </div>
+    <img class="preloaded" *ngIf="loading$ | async" src="assets/images/order-page/preloader.svg" alt="preloaded">
   </div>
   <div>
-
   </div>
   <ul class="box-gren-transparent flex-box" *ngIf="isSearchValue">
     <li>
@@ -57,7 +60,7 @@
     </li>
   </ul>
   <div class="btn-box">
-    <!-- <vtm-button [disabled]="!isSearchValue" routerLink="uncorrect-data" label="Дані невірні, ввести вручну" type="secondary"></vtm-button> -->
-    <!-- <vtm-button [disabled]="!isSearchValue" routerLink="data-insuranse" label="Все вірно, продовжити" type="primary"></vtm-button> -->
+    <vtm-button [disabled]="!isSearchValue" routerLink="uncorrect-data" label="Дані невірні, ввести вручну" type="secondary"></vtm-button>
+    <vtm-button [disabled]="!isSearchValue" routerLink="data-insuranse" label="Все вірно, продовжити" type="primary"></vtm-button>
   </div>
 </div>

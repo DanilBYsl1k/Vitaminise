@@ -8,6 +8,7 @@ import { DataInsuredComponent } from '@modules/order/components/data-insured/dat
 import { ReactiveFormsModule } from '@angular/forms';
 import { PreloaderModule } from '@shared/stand-component/preloader/preloader.module';
 import { InputModule } from '@shared/stand-component/input/input.module';
+import { ButtonComponent } from '@shared/stand-component/button/button.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { InputModule } from '@shared/stand-component/input/input.module';
     ReactiveFormsModule,
     PreloaderModule,
     InputModule,
+    ButtonComponent,
   ],
 })
 export class OrderModule {}

@@ -1,6 +1,11 @@
 <div class="question-wrapper">
+  <div class="box-btn">
+    <vtm-button type="link" label="Назад" routerLink="/">
+      <img src="assets/images/share_img/arow_back.svg"alt="arow back"/>
+  </vtm-button>
+    <vtm-button type="other"></vtm-button>
+  </div>
   <h1 class="question-wrapper__title">{{ 'QUESTION_PAGE.TITLE' | translate }}</h1>
-
   <div class="question-wrapper__content">
     <router-outlet></router-outlet>
   </div>

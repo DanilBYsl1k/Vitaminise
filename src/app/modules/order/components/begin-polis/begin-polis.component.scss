@@ -2,21 +2,58 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 90vh;
-    .title-h3-polis{
-        display: flex;
-        align-items: center;
+    // min-height: 90vh;
+    &__title-polis{
+        width: 100%;
+        background: #FFEFDD;
         img{
             margin: 0 10px;
         }
     }
-    .title-p {
+    &__title-p {
         text-align: center;
         font-family: 'Open Sans';
         font-style: normal;
         font-weight: 400;
-        font-size: 16px;
         line-height: 140%;
+    }
+    &__input-box{
+        width: 100%;
+        align-items: center;
+    }
+    &__wrapper-input{
+        // border: 1px solid #E7E8F5;
+        border-radius: 10px;
+        width: 270px;
+        input{
+            width: 190px;
+            border: 1px solid #E7E8F5;
+            outline: none;
+            border-radius:0px 10px 10px 0px;
+            font-weight: 700;
+            font-size: 28px;
+            padding: 0 10px;
+        }
+    }
+    &__flag{
+        border-radius: 10px 0px 0px 10px;
+        padding:10px ;
+        background-color:  rgba(123, 123, 126, 0.3);;
+        img{
+            width: 35px;
+            height: 20px;
+        }
+        b{
+            text-align: center;
+        }
+    }
+    .preloaded{
+        width: 35px;
+        height: 35px;
+        
+    }
+    .box-gren-transparent{
+        background: #F2F9E9;
     }
     .btn-box {
         width: 100%;

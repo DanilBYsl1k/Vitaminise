@@ -1,10 +1,12 @@
 <div class="welcome-wrapper">
   <h1 class="welcome-wrapper__title">{{ 'MAIN_PAGE.TITLE' | translate }}</h1>
   <h3 class="welcome-wrapper__subtitle">{{ 'MAIN_PAGE.SUBTITLE' | translate }}</h3>
-  <div>
-      <vtm-button-route label="1"></vtm-button-route>
-      <vtm-button-route label="1"></vtm-button-route>
-      <vtm-button-route label="1"></vtm-button-route>
-
+  <div class="welcome-wrapper__wrapper-box-btn fx justify-content-center">
+    <div class="welcome-wrapper__box-btn fx fx-wrap ">
+      <vtm-button-route routerLink="insurance" label="{{ 'MAIN_PAGE.BUTTONS.BUY-POLIS' | translate }}"></vtm-button-route>
+      <vtm-button-route routerLink="question" label="{{ 'MAIN_PAGE.BUTTONS.KNOW-MORE' | translate }}"></vtm-button-route>
+      <vtm-button-route label="{{ 'MAIN_PAGE.BUTTONS.CHECK-MY_INSURANCE' | translate }}"></vtm-button-route>
+      <vtm-button-route label="{{ 'MAIN_PAGE.BUTTONS.APPLY' | translate }}"></vtm-button-route>
+    </div>
   </div>
 </div>

@@ -31,3 +31,8 @@ h3 {
     @include flex-core('-lt-#{$breakpoint}');
   }
 }
+.open{
+  border-top:1px solid #92C84A;
+  height: 100%  !important;
+  padding: 20px;
+}
